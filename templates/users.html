@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Teste Giren Kullanıcılar</h1>
+<table>
+    <tr>
+        <th>İsim</th>
+        <th>Soyisim</th>
+        <th>E-Mail</th>
+        <th>Doğru</th>
+        <th>Yanlış</th>
+        <th>Doğruluk Oranı</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+        <td>{{ user.name }}</td>
+        <td>{{ user.surname }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.correct }}</td>
+        <td>{{ user.incorrect }}</td>
+        <td>{{ user.accuracy }}%</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

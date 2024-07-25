@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Test Sonucu</h1>
+<p>Doğru Sayısı: {{ correct }}</p>
+<p>Yanlış Sayısı: {{ incorrect }}</p>
+<p>Doğruluk Oranı: {{ accuracy }}%</p>
+<a href="{{ url_for('index') }}" class="btn">Ana Sayfaya Dön</a>
+{% endblock %}

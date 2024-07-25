@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Anasayfa</a></li>
+                <li><a href="https://drive.google.com/drive/folders/1SRjQXcQ3kduMPLW88f9d4A-Guf2-fKLY?usp=drive_link" target="_blank">Drive</a></li>
+                <li><a href="{{ url_for('test') }}">Test</a></li>
+                <li><a href="{{ url_for('users') }}">Kullanıcılar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        <p>Cihan Sidar Yıldız</p>
+    </footer>
+</body>
+</html>
